@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { INews } from '../../interfaces/inews.interface';
 
 @Component({
@@ -24,3 +24,10 @@ export class BlogComponent {
   }
   ]
 }
+
+  newTitle: "";
+  newImage: "";
+  newText: "";
+  newDate: "";
+
+  
