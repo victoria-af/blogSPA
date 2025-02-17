@@ -1,9 +1,5 @@
 <div class="form">
     <form>
-        newTitle: "";
-        newImage: "";
-        newText: "";
-        newDate: "";
 
         <div>
             <label for="title">Titulo</label>
@@ -27,4 +23,15 @@
     <hr>
     <div>
     </div>
+
+    <div>
+        <h2>noticias publicadas</h2>
+        <div *ngFor="let newA of newsArray">
+            <h3>{{newA.title}}</h3>
+            <img src="newA.imageUrl" alt={{newA.imageUrl}}/>
+            <p>{{newA.text}}</p>
+            <p>{{newA.date}}</p>
+        </div>
+    </div>
+
 <div>

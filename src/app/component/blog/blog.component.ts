@@ -1,9 +1,10 @@
 import { Component, EventEmitter } from '@angular/core';
 import { INews } from '../../interfaces/inews.interface';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-blog',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
