@@ -1,0 +1,18 @@
+/* Fondo para toda la página */
+body {
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+/* Cabecera principal */
+.header {
+    background: linear-gradient(to right, #ea9e23, #00f7ff);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+

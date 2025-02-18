@@ -1,13 +1,13 @@
+<h2>Blog de viajes</h2>
 <div class="form">
     <form (ngSubmit)="addNews()">
-
         <div>
-            <label for="title">Titulo</label>
+            <label for="title">Título</label>
             <input type="text" id="title" [(ngModel)]="newTitle" name="title">
         </div>
         <div>
             <label for="image">Imagen</label>
-            <input type="url" id="image" [(ngModel)]="newImage" name="image">
+            <input type="text" id="image" [(ngModel)]="newImage" name="image">
         </div>
         <div>
             <label for="text">Texto</label>
@@ -18,21 +18,19 @@
             <input type="text" id="date" [(ngModel)]="newDate" name="date">
         </div>
         <button type="submit">Publicar viaje</button>
-    </form>
-    <h2>Blog de viajes</h2>
+    </form> 
+    
+
     
     <hr>
-    <div>
-    </div>
 
-    <div>
-        <h2>noticias publicadas</h2>
-        <div *ngFor="let newA of newsArray">
+    <div class="noticias-publicadas">
+        <h2>Noticias anteriores</h2>
+        <div *ngFor="let newA of newsArray" class="noticia">
             <h3>{{newA.title}}</h3>
             <img [src]="newA.imageUrl" [alt]="newA.title"/>
             <p>{{newA.text}}</p>
-            <p>{{newA.date}}</p>
+            <p class="fecha">{{newA.date}}</p>
         </div>
     </div>
-
-<div>
+</div>

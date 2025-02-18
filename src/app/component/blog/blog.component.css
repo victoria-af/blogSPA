@@ -1,0 +1,88 @@
+/* Fuente y estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Contenedor principal */
+.form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Títulos */
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Estilo del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    color: #333;
+}
+
+input {
+    width: 100%;  /* Ocupar todo el ancho disponible */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+button {
+    background: #ffa600;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #b36b00;
+}
+
+/* Estilo del listado de noticias */
+.noticias-publicadas {
+    margin-top: 30px;
+}
+
+.noticia {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: #f9f9f9;
+}
+
+.noticia h3 {
+    color: #e6a01e;
+}
+
+.noticia img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.noticia p {
+    color: #555;
+}
