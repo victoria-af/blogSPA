@@ -1,4 +1,4 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component} from '@angular/core';
 import { INews } from '../../interfaces/inews.interface';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -40,7 +40,7 @@ export class BlogComponent {
     }
   
     // Agregar la nueva noticia al array
-    this.newsArray.push({
+    this.newsArray.unshift({
       title: this.newTitle,
       imageUrl: this.newImage,
       text: this.newText,
