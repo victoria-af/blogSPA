@@ -1,22 +1,23 @@
 <div class="form">
-    <form (ngSubmit)="">
+    <form (ngSubmit)="addNews()">
 
         <div>
             <label for="title">Titulo</label>
-            <input type="text">
+            <input type="text" id="title" [(ngModel)]="newTitle" name="title">
         </div>
         <div>
             <label for="image">Imagen</label>
-            <input type="text">
+            <input type="text" id="image" [(ngModel)]="newImage" name="image">
         </div>
         <div>
             <label for="text">Texto</label>
-            <input type="text">
+            <input type="text" id="text" [(ngModel)]="newText" name="text">
         </div>
         <div>
             <label for="date">Fecha</label>
-            <input type="text">
+            <input type="text" id="date" [(ngModel)]="newDate" name="date">
         </div>
+        <button type="submit">Publicar viaje</button>
     </form>
     <h2>Blog de viajes</h2>
     
@@ -28,7 +29,7 @@
         <h2>noticias publicadas</h2>
         <div *ngFor="let newA of newsArray">
             <h3>{{newA.title}}</h3>
-            <img [src]="newA.imageUrl" [alt]={{newA.imageUrl}}/>
+            <img [src]="newA.imageUrl" [alt]="newA.title"/>
             <p>{{newA.text}}</p>
             <p>{{newA.date}}</p>
         </div>

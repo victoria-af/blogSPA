@@ -1,10 +1,12 @@
 import { Component, EventEmitter } from '@angular/core';
 import { INews } from '../../interfaces/inews.interface';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-blog',
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
+  standalone: true,
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
@@ -29,5 +31,27 @@ export class BlogComponent {
   newImage: string= "";
   newText: string= "";
   newDate: string= "";
+
+
+  addNews() {
+    if (!this.newTitle || !this.newImage || !this.newText || !this.newDate) {
+      alert("Todos los campos son obligatorios.");
+      return;
+    }
+  
+    // Agregar la nueva noticia al array
+    this.newsArray.push({
+      title: this.newTitle,
+      imageUrl: this.newImage,
+      text: this.newText,
+      date: this.newDate
+    });
+  
+    // Limpiar los inputs después de agregar la noticia
+    this.newTitle = "";
+    this.newImage = "";
+    this.newText = "";
+    this.newDate = "";
+  }
 
 }
