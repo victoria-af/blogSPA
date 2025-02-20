@@ -1,4 +1,4 @@
-<h2>Blog de viajes</h2>
+<h2>añade un nuevo viaje</h2>
 <div class="form">
     <form (ngSubmit)="addNews()">
         <div>
@@ -6,8 +6,10 @@
             <input type="text" id="title" [(ngModel)]="newTitle" name="title">
         </div>
         <div>
-            <label for="image">Imagen</label>
-            <input type="text" id= "image" name="image" [(ngModel)]="newImage">
+            <label for="image">Imagen (URL)</label>
+            <input type="url" id="image" name="image" [(ngModel)]="newImage"
+        required pattern="https?://.*" 
+        title="La URL debe empezar con http:// o https://">
         </div>
         <div>
             <label for="text">Texto</label>
@@ -25,12 +27,14 @@
     <hr>
 
     <div class="noticias-publicadas">
-        <h2>Noticias anteriores</h2>
-        <div *ngFor="let newA of newsArray" class="noticia">
+        <h2>publicaciones anteriores</h2>
+        <div *ngFor="let newsGroup of newsArray" class="noticia">
+            <div *ngFor= "let newA of newsGroup">
             <h3>{{newA.title}}</h3>
             <img [src]="newA.imageUrl" [alt]="newA.title"/>
             <p>{{newA.text}}</p>
             <p class="fecha">{{newA.date}}</p>
+        </div>
         </div>
     </div>
 </div>
