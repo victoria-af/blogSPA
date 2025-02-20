@@ -15,5 +15,8 @@ body {
     letter-spacing: 1.5px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 1000px; 
+    margin: auto; 
 }
+
 

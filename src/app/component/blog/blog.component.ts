@@ -14,7 +14,6 @@ export class BlogComponent implements OnInit{
   newsArray: INews[][]= []
   
   ngOnInit(): void {
-
     this.newsArray= [
       [
         {

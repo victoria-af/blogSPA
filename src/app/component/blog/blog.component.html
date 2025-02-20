@@ -28,8 +28,8 @@
 
     <div class="noticias-publicadas">
         <h2>publicaciones anteriores</h2>
-        <div *ngFor="let newsGroup of newsArray" class="noticia">
-            <div *ngFor= "let newA of newsGroup">
+        <div *ngFor="let newsGroup of newsArray" class="noticias">
+            <div *ngFor= "let newA of newsGroup" class="noticia">
             <h3>{{newA.title}}</h3>
             <img [src]="newA.imageUrl" [alt]="newA.title"/>
             <p>{{newA.text}}</p>
